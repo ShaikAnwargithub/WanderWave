@@ -1,49 +1,75 @@
-# WanderWave
-WanderWave-Project 🏄‍♂️🌊
-WanderWave is a simple Express + MongoDB listing app (EJS views) for managing travel listings.
+# WanderWave 🏄‍♂️🌊
+**WanderWave** is a simple Airbnb-style listing web application built using **Express.js**, **MongoDB**, and **EJS**.  
+It allows users to create, view, update, and delete travel listings.
 
-Features ✅
-CRUD for listings (create, read, update, delete)
-EJS-based views in views
-MongoDB with Mongoose models in models
-Static files served from public
-Prerequisites 🔧
-Node.js (v14+)
-MongoDB (local or remote)
-Optional: git, nodemon for development
-Quickstart — Install & Run 🚀
+---
 
-# Clone (if you haven't already)git clone https://github.com/<your-username>/WanderWave-Project.gitcd WanderWave-Project# Install dependenciesnpm install# Create .env from .env.example (see below)cp .env.example .env# Run in development (use nodemon if installed)npm run dev# ornode app.js
-Environment Variables (.env) 🔐
-Create a .env file in the project root. Example .env.example:
+## ✨ Features
 
+- CRUD operations for listings (Create, Read, Update, Delete)
+- EJS-based server-side rendered views
+- MongoDB database with Mongoose models
+- Static files served from the `public` folder
+- RESTful routing
 
-# .env.exampleMONGO_URI=mongodb://127.0.0.1:27017/wanderlustPORT=8080
-In app.js, use process.env.MONGO_URI and process.env.PORT (recommended) and load env variables with dotenv.
+---
 
-Example code snippet:
+## 🛠 Tech Stack
 
+- Backend: Node.js, Express.js
+- Database: MongoDB, Mongoose
+- Templating Engine: EJS
+- Styling: CSS
+- Version Control: Git & GitHub
 
-// at top of app.jsrequire('dotenv').config();const mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/wanderlust';await mongoose.connect(mongoURI);const port = process.env.PORT || 8080;app.listen(port, () => console.log(`Listening on ${port}`));
-Scripts (suggested) ⚙️
-Add these to package.json for convenience:
+---
 
+## 📦 Prerequisites
 
-"scripts": {  "start": "node app.js",  "dev": "nodemon app.js"}
-Database / Seeding 💾
-If you have an init folder with seed scripts, run:
+- Node.js (v14 or above)
+- MongoDB (local or remote)
+- Optional: Git
+- Optional: Nodemon (for development)
 
+---
 
-node init/index.js
-(Adjust based on your seed script names.)
+## 🚀 Installation & Setup
 
-Important Notes ⚠️
-Do not commit secrets. Make sure .env is listed in .gitignore (you already have it). If you ever push credentials, rotate them immediately.
+### Clone the repository
 
-Line endings: If you're on Windows and saw LF/CRLF warnings, they are informational. Consider adding a .gitattributes for consistent line endings.
+```bash
+git clone https://github.com/ShaikAnwargithub/WanderWave.git
+cd WanderWave
+```
 
-Contributing 🤝
-Fork the repo, create a feature branch, open a PR.
-Please include clear commit messages and a short description.
-License 📝
-Add a LICENSE (MIT recommended) or specify your preferred license.
+### Install dependencies
+
+```bash
+npm install
+```
+### Open in browser:
+
+-http://localhost:8080
+
+## 📁 Project Structure
+
+```text
+WanderWave/
+│
+├── models/
+├── views/
+├── public/
+├── init/
+├── app.js
+├── package.json
+└── README.md
+```
+---
+
+## 🤝 Contributing
+
+- Fork the repository
+- Create a feature branch
+- Commit changes with clear messages
+- Open a Pull Request
+
